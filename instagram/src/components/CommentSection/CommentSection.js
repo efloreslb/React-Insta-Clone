@@ -4,7 +4,7 @@ import Comment from './Comment';
 export default function CommentSection(props) {
     return (
         <>
-            CommentSection
+            <h3>CommentSection</h3>
             <Comment />
         </>
     )
