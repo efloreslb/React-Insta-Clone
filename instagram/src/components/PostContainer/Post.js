@@ -1,5 +1,6 @@
 import React from 'react';
 import './post.css';
+import PropTypes from 'prop-types';
 
 export default function Post(props) {
     // console.log(props);
@@ -20,4 +21,10 @@ export default function Post(props) {
             
         </>
     )
+}
+
+Post.propTypes = {
+    thumbnail: PropTypes.string,
+    username: PropTypes.string,
+    likes: PropTypes.number
 }
