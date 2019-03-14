@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './comment.css';
+import { CardText } from 'reactstrap';
 
 export default function Comment(props) {
     //console.log(props);
     return (
-        <>
-            <h6>{props.username}</h6>
-            <p>{props.text}</p>
-        </>
+        <CardText className="comment">
+            <strong>{props.username}</strong> {props.text}
+        </CardText>
     )
 }
 

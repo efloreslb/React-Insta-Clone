@@ -2,23 +2,26 @@ import React from 'react';
 import './post.css';
 import PropTypes from 'prop-types';
 
+import { CardImg, CardTitle, CardBody, CardSubtitle } from 'reactstrap';
+
 export default function Post(props) {
     // console.log(props);
     return (
         <>
-            <div className="user">
+            <CardTitle className="user">
                 <img className="thumbnail" src={props.thumbnail} alt='' />
-                <h6>{props.username}</h6>
-            </div>
-
-            <img className="postImg" src={props.image} alt='' />
-
-            <div className="interaction">
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-                <h6>{props.likes} likes</h6>
-            </div>
-            
+                <strong>{props.username}</strong>
+            </CardTitle>
+            <CardImg className="postImg" src={props.image} alt='' />
+            <CardBody className="interact">
+                <CardSubtitle className="interactButtons">
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-comment"></i>
+                </CardSubtitle>
+                <CardSubtitle className="likes">
+                    <strong>{props.likes} likes</strong>
+                </CardSubtitle>
+            </CardBody>
         </>
     )
 }

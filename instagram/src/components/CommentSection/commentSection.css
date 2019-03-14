@@ -1,0 +1,22 @@
+.commentSection {
+    margin-top: 0px;
+}
+
+.timeStamp {
+    color: darkgray;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.commentSection .addComment {
+    border: 0px solid white;
+    border-top: 1px solid gainsboro;
+    margin-top: 8px;
+    color: pink;
+}
+
+.commentSection .addComment:focus {
+    outline: none;
+} 

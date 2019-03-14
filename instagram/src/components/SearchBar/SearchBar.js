@@ -1,13 +1,15 @@
 import React from 'react';
+import './searchBar.css'
+import { Input } from 'reactstrap';
 
 export default function SearchBar(props){
     return (
         <div className="searchBar">
             <div className="home">
-                <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i> <h1>Instragram</h1>
             </div>
             <form>
-                <input type="text" name="search" placeholder="Search"></input>
+                <Input name="search" placeholder="Search" />
             </form>
             <div className="explore">
                 <i className="far fa-compass"></i>

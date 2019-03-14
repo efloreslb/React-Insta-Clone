@@ -1,19 +1,15 @@
 import React from 'react';
 import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
-
-import { Container } from 'reactstrap';
+import './postContainer.css';
+import { Card } from 'reactstrap';
 
 export default function PostContainer(props) {
     //console.log(props.post);
     return (
-        <>
-            <Container>
-                <Post username={props.post.username} thumbnail={props.post.thumbnailUrl} image={props.post.imageUrl} likes={props.post.likes}/>
-                <CommentSection comments={props.post.comments} />
-            </Container>
-            
-        </>
-
+        <Card>
+            <Post username={props.post.username} thumbnail={props.post.thumbnailUrl} image={props.post.imageUrl} likes={props.post.likes}/>
+            <CommentSection comments={props.post.comments} timeStamp={props.post.timestamp}/>
+        </Card>
     )
 }
