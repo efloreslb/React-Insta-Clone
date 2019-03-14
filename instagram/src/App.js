@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {dummyData.map(post => <PostContainer post={post}/>)}
+        {dummyData.map(post => <PostContainer post={post} key={post.timestamp}/>)}
       </div>
     );
   }

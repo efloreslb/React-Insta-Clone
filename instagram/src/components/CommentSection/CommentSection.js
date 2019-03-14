@@ -2,10 +2,12 @@ import React from 'react';
 import Comment from './Comment';
 
 export default function CommentSection(props) {
+    console.log(props.comments);
     return (
         <>
-            <h3>CommentSection</h3>
-            <Comment />
+            {props.comments.map(comment => 
+                <Comment username={comment.username} text={comment.text}/>
+            )}
         </>
     )
 }

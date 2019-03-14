@@ -1,9 +1,11 @@
 import React from 'react';
 
 export default function Comment(props) {
+    console.log(props);
     return (
         <>
-            <h4>Comment</h4>
+            <h6>{props.username}</h6>
+            <p>{props.text}</p>
         </>
     )
 }
