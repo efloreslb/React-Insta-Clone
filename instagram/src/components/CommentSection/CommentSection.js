@@ -2,23 +2,50 @@ import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import './commentSection.css';
-import {CardBody, Input} from 'reactstrap';
+import {CardBody} from 'reactstrap';
+import AddComment from './AddComment';
 
-export default function CommentSection(props) {
+// export default function CommentSection(props) {
+export default class CommentSection extends React.Component {
     //console.log(props.comments);
-    return (
-        <CardBody className="commentSection">
-            {props.comments.map(comment => 
-                <Comment username={comment.username} text={comment.text} key={comment.text}/>
-            )}
-            <div className="timeStamp">{props.timeStamp}</div>
-            <Input className="addComment" name="comment" placeholder="Add a comment..." />
-        </CardBody>
-    )
+    constructor(props) {
+        super();
+        this.state = {
+            comments: props.comments,
+            username: "garishere"
+        }
+    }
+
+    inputChange(event) {
+        this.setState({[event.target.name]: event.target.value})
+        console.log(this.state.comment);
+    }
+
+    addNewComment(event, index) {
+        event.preventDefault();
+        this.setState(
+            this.state.comments.push({
+                [event.target.name]: event.target.value
+            })
+        )
+    }
+
+    render() {
+        // console.log(this.state);
+        return (
+            <CardBody className="commentSection">
+                {this.state.comments.map(comment => 
+                    <Comment username={comment.username} text={comment.text} key={comment.text}/>
+                )}
+                <AddComment 
+                    addNewComment={this.addNewComment} 
+                    inputChange={this.inputChange}
+                />
+            </CardBody>
+        )
+    }
 }
 
 CommentSection.propTypes = {
-    username: PropTypes.string,
-    text: PropTypes.string,
-    timeStamp: PropTypes.string
+    comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
 }
