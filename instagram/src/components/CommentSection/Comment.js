@@ -1,5 +1,6 @@
 import React from 'react';
 import './comment.css';
+
 import { CardText } from 'reactstrap';
 
 export default function Comment(props) {

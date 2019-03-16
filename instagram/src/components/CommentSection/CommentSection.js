@@ -12,34 +12,48 @@ export default class CommentSection extends React.Component {
         super();
         this.state = {
             comments: props.comments,
-            username: "garishere"
+            newcomment: ""
         }
     }
 
-    inputChange(event) {
-        this.setState({[event.target.name]: event.target.value})
-        console.log(this.state.comment);
+    inputChange = event => { //Use arrow function to avoid binding error
+        this.setState({newcomment: event.target.value}) //[event.target.name]
     }
 
-    addNewComment(event, index) {
+    // addNewComment = (event) => {
+    //     event.preventDefault();
+    //     // const newcomments = this.state.comments.slice(); //no args - copies array
+    //     const newcomments = [...this.state.comments] //spread operator creates copy
+    //     newcomments.push({
+    //         username: 'edgar',
+    //         text: this.state.newcomment
+    //     })
+    //     this.setState({comments: newcomments, newcomment: ""})
+    // }
+    addNew = event => {
         event.preventDefault();
-        this.setState(
-            this.state.comments.push({
-                [event.target.name]: event.target.value
-            })
-        )
+        this.setState(({comments, newcomment}) => {
+            return {
+                comments: [...comments, { //spread operator creates copy of array
+                    username: 'edgar',
+                    text: newcomment
+                }],
+                newcomment: ""
+            }
+        })
     }
 
     render() {
-        // console.log(this.state);
+        console.log(this.state);
         return (
             <CardBody className="commentSection">
                 {this.state.comments.map(comment => 
                     <Comment username={comment.username} text={comment.text} key={comment.text}/>
                 )}
                 <AddComment 
-                    addNewComment={this.addNewComment} 
+                    add={this.addNew} 
                     inputChange={this.inputChange}
+                    value={this.state.newcomment}
                 />
             </CardBody>
         )
