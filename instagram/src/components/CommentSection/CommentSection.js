@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 import './commentSection.css';
 import {CardBody, Input} from 'reactstrap';
 
@@ -14,4 +15,10 @@ export default function CommentSection(props) {
             <Input className="addComment" name="comment" placeholder="Add a comment..." />
         </CardBody>
     )
+}
+
+CommentSection.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string,
+    timeStamp: PropTypes.string
 }

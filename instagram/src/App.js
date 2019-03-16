@@ -6,12 +6,23 @@ import SearchBar from './components/SearchBar/SearchBar';
 import { Container } from 'reactstrap';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({data: dummyData})
+  }
+
   render() {
     return (
       <div className="App">
       <SearchBar />
         <Container>
-          {dummyData.map(post => <PostContainer post={post} key={post.timestamp}/>)}
+          {this.state.data.map(post => <PostContainer post={post} key={post.timestamp}/>)}
         </Container>
       </div>
     );
