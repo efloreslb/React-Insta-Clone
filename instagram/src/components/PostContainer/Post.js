@@ -2,11 +2,10 @@ import React from 'react';
 import './post.css';
 import PropTypes from 'prop-types';
 
-import { CardImg, CardTitle, CardBody, CardSubtitle } from 'reactstrap';
+import { CardImg, CardTitle } from 'reactstrap';
 
 export default function Post(props) {
     // console.log(props);
-    const likes = props.likes;
 
     return (
         <>

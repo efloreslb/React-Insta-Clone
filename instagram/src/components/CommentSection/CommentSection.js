@@ -64,8 +64,6 @@ export default class CommentSection extends React.Component {
     }
 
     render() {
-        console.log(this.state);
-
         let liked = this.state.liked ? "liked" : "";
 
         return (
@@ -84,7 +82,7 @@ export default class CommentSection extends React.Component {
                 {this.state.comments.map(comment => 
                     <Comment username={comment.username} text={comment.text} key={comment.text}/>
                 )}
-                
+
                 <AddComment 
                     add={this.addNew} 
                     inputChange={this.inputChange}
