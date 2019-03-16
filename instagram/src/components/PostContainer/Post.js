@@ -6,6 +6,8 @@ import { CardImg, CardTitle, CardBody, CardSubtitle } from 'reactstrap';
 
 export default function Post(props) {
     // console.log(props);
+    const likes = props.likes;
+
     return (
         <>
             <CardTitle className="user">
@@ -13,15 +15,6 @@ export default function Post(props) {
                 <strong>{props.username}</strong>
             </CardTitle>
             <CardImg className="postImg" src={props.image} alt='' />
-            <CardBody className="interact">
-                <CardSubtitle className="interactButtons">
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
-                </CardSubtitle>
-                <CardSubtitle className="likes">
-                    <strong>{props.likes} likes</strong>
-                </CardSubtitle>
-            </CardBody>
         </>
     )
 }

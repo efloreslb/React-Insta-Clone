@@ -19,3 +19,26 @@
 .commentSection .addComment:focus {
     outline: none;
 } 
+
+.interactButtons {
+    width: 55px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.likes {
+    display: flex;
+}
+
+.liked {
+    color: red;
+}
+
+i {
+    font-size: 20px;
+    cursor: pointer;
+}

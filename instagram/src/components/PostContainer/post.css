@@ -13,25 +13,3 @@
     margin-right: 10px;
 }
 
-.interact {
-
-}
-
-.interactButtons {
-    width: 55px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.likes {
-    display: flex;
-    margin-top: 20px;
-}
-
-i {
-    font-size: 20px;
-    cursor: pointer;
-}
