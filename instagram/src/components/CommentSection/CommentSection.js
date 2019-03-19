@@ -18,7 +18,7 @@ export default class CommentSection extends React.Component {
         }
     }
 
-    inputChange = event => { //Use arrow function to avoid binding error
+    inputChange = event => { //arrow function to avoid binding error
         this.setState({newcomment: event.target.value}) //[event.target.name]
     }
 

@@ -11,6 +11,7 @@ export default function SearchBar(props){
 
             <Form onSubmit={props.search}>
                 <Input 
+                    name="search"
                     placeholder="Search"
                     value={props.value} 
                     onChange={props.handleChange} 
