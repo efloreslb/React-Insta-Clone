@@ -11,7 +11,9 @@ const withAuthentication = PostsPage => LoginPage => {
 
         componentDidMount() {
             if (localStorage.getItem("username") !== null) {
-                this.setState({loggedIn: true})
+                // setTimeout(() => {
+                    this.setState({loggedIn: true})
+                // }, 1000);
             }
         }
 

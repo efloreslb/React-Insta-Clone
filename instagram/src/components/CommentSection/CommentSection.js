@@ -37,7 +37,7 @@ export default class CommentSection extends React.Component {
         this.setState(({comments, newcomment}) => {
             return {
                 comments: [...comments, { //spread operator creates copy of array
-                    username: 'edgar',
+                    username: localStorage.getItem('username'),
                     text: newcomment
                 }],
                 newcomment: ""

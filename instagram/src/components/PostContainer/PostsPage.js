@@ -31,6 +31,11 @@ class PostsPage extends Component {
             return post.username === this.state.criteria
         })})
     }
+
+    logOut = event => {
+        localStorage.clear();
+        window.location.reload();
+    }
   
     // searchComment = event => {
     //   event.preventDefault();
@@ -51,6 +56,7 @@ class PostsPage extends Component {
             value={this.state.value} 
             handleChange={this.handleChange}
             search={this.search}
+            logout={this.logOut}
           />
           <Container>
             {this.state.data.map(post => <PostContainer 
