@@ -77,7 +77,30 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
-  }
+  },
+  // {
+  //   username: "garishere",
+  //   thumbnailUrl:
+  //     "https://pbs.twimg.com/profile_images/1092486127162863616/_l9eusEW_400x400.jpg",
+  //   imageUrl:
+  //     "https://scontent-sjc3-1.cdninstagram.com/vp/5c70a241f5d61bab94e1e22703442374/5D082042/t51.2885-15/e35/31439587_2039660336104246_3983303586871246848_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com",
+  //   likes: 1345,
+  //   timestamp: "March 11th 2019, 11:11:11 am",
+  //   comments: [
+  //     {
+  //       username: "garishere",
+  //       text: "Omg much fun!"
+  //     },
+  //     {
+  //       username: "instagram",
+  //       text: "this is literally the best picture ever"
+  //     },
+  //     {
+  //       username: "nike_real",
+  //       text: "use our promocode and get 50% off our product!"
+  //     }
+  //   ]
+  // }
 ];
 
 export default dummyData;

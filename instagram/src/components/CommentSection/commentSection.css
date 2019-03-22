@@ -1,0 +1,44 @@
+/* .commentSection {
+    margin-top: 0px;
+}
+
+.timeStamp {
+    color: darkgray;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.commentSection .addComment {
+    border: 0px solid white;
+    border-top: 1px solid gainsboro;
+    margin-top: 8px;
+}
+
+.commentSection .addComment:focus {
+    outline: none;
+} 
+
+.interactButtons {
+    width: 55px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-bottom: 5px;
+} */
+
+/* .likes {
+    display: flex;
+} */
+
+.liked {
+    color: red;
+}
+
+i {
+    font-size: 20px;
+    cursor: pointer;
+}
