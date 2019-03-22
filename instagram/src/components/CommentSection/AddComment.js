@@ -5,6 +5,8 @@ export default function AddComment(props) {
     return (
         <Form onSubmit={props.add}>
             <Input 
+                expand
+                comment
                 name="newComment" 
                 placeholder="Add a comment..." 
                 onChange={props.inputChange}   

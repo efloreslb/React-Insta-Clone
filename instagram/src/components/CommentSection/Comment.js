@@ -1,13 +1,13 @@
 import React from 'react';
 // import './comment.css';
 
-import { CardText } from '../../../src/StyledComponents';
+import { CardText, Strong } from '../../../src/StyledComponents';
 
 export default function Comment(props) {
     //console.log(props);
     return (
         <CardText>
-            <strong>{props.username}</strong> {props.text}
+            <Strong midstrength>{props.username}</Strong> {props.text}
         </CardText>
     )
 }

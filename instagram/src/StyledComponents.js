@@ -22,6 +22,17 @@ const Input = styled.input`
     ${props => props.block && css`
         display: block;
     `}
+
+    ${props => props.expand && css`
+        width: 100%;
+    `}
+
+    ${props => props.comment && css`
+        border: 0px;
+        border-top: 1px solid lightgray;
+        border-radius: 0px;
+        margin-top: 10px;
+    `}
 `;
 
 const Button = styled.button`
@@ -51,6 +62,17 @@ const Button = styled.button`
 const H1 = styled.h1`
     font-family: 'Oleo Script', cursive;
     text-align: center;
+`;
+
+const H2 = styled.h2`
+    font-family: 'Oleo Script', cursive;
+    text-align: center;
+    max-width: 100px;
+    width: 100%;
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
 `;
 
 const Divider = styled.div`
@@ -98,7 +120,8 @@ const Body = styled.div`
 `;
 
 const Card = styled.div`
-    width: 500px;
+    max-width: 600px;
+    width: 100%;
     border: 1px solid lightgray;
     border-radius: 5px;
     margin: 5px 0;
@@ -114,10 +137,41 @@ const CardTitle = styled.div`
     margin: 15px;
 `;
 
-const CardBody = styled.div``;
+const CardBody = styled.div`
+    width: 100%;
+    padding: 15px;
+`;
 
-const CardSubtitle = styled.h3``;
+const CardSubtitle = styled.text`
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
 
-const CardText = styled.text``;
+    i:nth-child(n) {
+        padding-right: 13px;
+    }
+`;
 
-export {Body, Container, Form, Input, Button, H1, Header, Divider, RowContainer, Card, CardImg, CardTitle, CardText, CardBody, CardSubtitle, Thumbnail};
+const CardText = styled.text`
+    display: block;
+    text-align: left;
+    margin: .15em 0;
+`;
+
+const Strong = styled.text`
+    font-weight: 700;
+
+    ${props => props.midstrength && css`
+        font-weight: 600;
+    `}
+`;
+
+const CardFooter = styled.text`
+    text-transform: uppercase;
+    font-size: 11px;
+    color: gray;
+    display: flex;
+    margin: 5px 0;
+`;
+
+export {Body, Container, Form, Input, Button, H1, H2, Header, Divider, RowContainer, Card, CardImg, CardTitle, CardText, CardBody, CardSubtitle, Thumbnail, Strong, CardFooter};

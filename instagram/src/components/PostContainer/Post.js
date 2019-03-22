@@ -2,7 +2,7 @@ import React from 'react';
 // import './post.css';
 import PropTypes from 'prop-types';
 
-import { CardImg, CardTitle, Thumbnail } from '../../../src/StyledComponents';
+import { CardImg, CardTitle, Thumbnail, Strong } from '../../../src/StyledComponents';
 
 export default function Post(props) {
     // console.log(props);
@@ -11,9 +11,9 @@ export default function Post(props) {
         <>
             <CardTitle>
                 <Thumbnail src={props.thumbnail} alt='' />
-                <strong>{props.username}</strong>
+                <Strong>{props.username}</Strong>
             </CardTitle>
-            <CardImg  src={props.image} alt='' />
+            <CardImg src={props.image} alt='' />
         </>
     )
 }

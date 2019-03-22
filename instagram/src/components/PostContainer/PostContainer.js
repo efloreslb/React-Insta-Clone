@@ -9,7 +9,7 @@ export default function PostContainer(props) {
     return (
         <Card>
             <Post username={props.post.username} thumbnail={props.post.thumbnailUrl} image={props.post.imageUrl} timeStamp={props.post.timeStamp} />
-            <CommentSection comments={props.post.comments} likes={props.post.likes}/>
+            <CommentSection comments={props.post.comments} likes={props.post.likes} timestamp={props.post.timestamp}/>
         </Card>
     )
 }

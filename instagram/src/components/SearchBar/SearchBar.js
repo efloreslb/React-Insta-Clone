@@ -1,6 +1,6 @@
 import React from 'react';
 // import './searchBar.css'
-import {Header, Form, Input, H1, Divider, RowContainer} from '../../../src/StyledComponents';
+import {Header, Form, Input, H2, Divider, RowContainer} from '../../../src/StyledComponents';
 
 export default function SearchBar(props){
     return (
@@ -8,7 +8,7 @@ export default function SearchBar(props){
             <RowContainer>
                 <i className="fab fa-instagram"></i>
                 <Divider></Divider>
-                <H1>Instragram</H1>
+                <H2>Instragram</H2>
             </RowContainer>
 
             <Form onSubmit={props.search}>

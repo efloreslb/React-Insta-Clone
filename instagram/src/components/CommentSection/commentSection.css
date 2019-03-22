@@ -1,4 +1,4 @@
-.commentSection {
+/* .commentSection {
     margin-top: 0px;
 }
 
@@ -28,15 +28,14 @@
     justify-content: space-between;
     text-align: left;
     padding-bottom: 5px;
-}
+} */
 
-.likes {
+/* .likes {
     display: flex;
-}
+} */
 
 .liked {
     color: red;
-    overflow: hidden;
 }
 
 i {

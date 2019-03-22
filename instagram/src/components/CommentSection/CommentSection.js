@@ -1,8 +1,8 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-// import './commentSection.css';
-import {CardBody, CardSubtitle} from '../../../src/StyledComponents';
+import './commentSection.css';
+import {CardBody, CardSubtitle, Strong, CardFooter} from '../../../src/StyledComponents';
 import AddComment from './AddComment';
 
 // export default function CommentSection(props) {
@@ -14,6 +14,7 @@ export default class CommentSection extends React.Component {
             likes: props.likes,
             liked: false,
             comments: props.comments,
+            timestamp: props.timestamp,
             newcomment: ""
         }
     }
@@ -76,18 +77,20 @@ export default class CommentSection extends React.Component {
                 </CardSubtitle>
 
                 <CardSubtitle className="likes">
-                    <strong>{this.state.likes} likes</strong>
+                    <Strong midstrength>{this.state.likes} likes</Strong>
                 </CardSubtitle>
 
                 {this.state.comments.map(comment => 
                     <Comment username={comment.username} text={comment.text} key={comment.text}/>
                 )}
 
+                <CardFooter>{this.state.timestamp}</CardFooter>   
+
                 <AddComment 
                     add={this.addNew} 
                     inputChange={this.inputChange}
                     value={this.state.newcomment}
-                />
+                />  
             </CardBody>
         )
     }
