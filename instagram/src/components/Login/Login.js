@@ -1,13 +1,13 @@
 import React from 'react';
-import {Container, Form, Input, Button} from 'reactstrap';
-import './login.css'
-
+import {Container, Form, Input, Button, H1} from '../../../src/StyledComponents';
+// import './login.css'
+// import styled, {css} from 'styled-components';
 
 export default class Login extends React.Component {
     constructor(props) {
         super();
         this.state = {
-
+            username: null
         }
     }
 
@@ -21,7 +21,7 @@ export default class Login extends React.Component {
             localStorage.setItem('username', [this.state.username])
         }
         else {
-            alert("Empty username")
+            alert("Please enter username")
         }
     }
 
@@ -29,10 +29,10 @@ export default class Login extends React.Component {
         return (
             <Container className="logincontainer">
                 <Form className="loginform" onSubmit={this.login}>
-                    <h2>Instagram</h2>
+                    <H1>Instagram</H1>
                     <Input className="field" name="username" placeholder="Username" value={this.state.value} onChange={this.handleChange}/>
                     <Input className="field" name="password" placeholder="Password" />
-                    <Button body inverse color="primary">Log In</Button>
+                    <Button primary expand color="primary">Log In</Button>
                 </Form>
             </Container>
         )
