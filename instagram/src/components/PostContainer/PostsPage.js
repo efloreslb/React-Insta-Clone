@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
-import { Container } from 'reactstrap';
+import { Body } from '../../../src/StyledComponents';
 
 
 class PostsPage extends Component {
@@ -58,12 +58,12 @@ class PostsPage extends Component {
             search={this.search}
             logout={this.logOut}
           />
-          <Container>
+          <Body>
             {this.state.data.map(post => <PostContainer 
               post={post} 
               key={Date.now() + Math.random()}
             />)}
-          </Container>
+          </Body>
         </div>
       );
     }

@@ -1,12 +1,12 @@
 import React from 'react';
-import './comment.css';
+// import './comment.css';
 
-import { CardText } from 'reactstrap';
+import { CardText } from '../../../src/StyledComponents';
 
 export default function Comment(props) {
     //console.log(props);
     return (
-        <CardText className="comment">
+        <CardText>
             <strong>{props.username}</strong> {props.text}
         </CardText>
     )

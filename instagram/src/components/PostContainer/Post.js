@@ -1,19 +1,19 @@
 import React from 'react';
-import './post.css';
+// import './post.css';
 import PropTypes from 'prop-types';
 
-import { CardImg, CardTitle } from 'reactstrap';
+import { CardImg, CardTitle, Thumbnail } from '../../../src/StyledComponents';
 
 export default function Post(props) {
     // console.log(props);
 
     return (
         <>
-            <CardTitle className="user">
-                <img className="thumbnail" src={props.thumbnail} alt='' />
+            <CardTitle>
+                <Thumbnail src={props.thumbnail} alt='' />
                 <strong>{props.username}</strong>
             </CardTitle>
-            <CardImg className="postImg" src={props.image} alt='' />
+            <CardImg  src={props.image} alt='' />
         </>
     )
 }

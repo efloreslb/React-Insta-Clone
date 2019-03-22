@@ -27,11 +27,11 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <Container className="logincontainer">
-                <Form className="loginform" onSubmit={this.login}>
+            <Container>
+                <Form onSubmit={this.login}>
                     <H1>Instagram</H1>
-                    <Input className="field" name="username" placeholder="Username" value={this.state.value} onChange={this.handleChange}/>
-                    <Input className="field" name="password" placeholder="Password" />
+                    <Input block name="username" placeholder="Username" value={this.state.value} onChange={this.handleChange}/>
+                    <Input name="password" placeholder="Password" />
                     <Button primary expand color="primary">Log In</Button>
                 </Form>
             </Container>

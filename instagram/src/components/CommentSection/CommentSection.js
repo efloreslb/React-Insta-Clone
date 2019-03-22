@@ -1,8 +1,8 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-import './commentSection.css';
-import {CardBody, CardSubtitle} from 'reactstrap';
+// import './commentSection.css';
+import {CardBody, CardSubtitle} from '../../../src/StyledComponents';
 import AddComment from './AddComment';
 
 // export default function CommentSection(props) {

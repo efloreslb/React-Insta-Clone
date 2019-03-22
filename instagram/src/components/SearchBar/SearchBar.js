@@ -1,13 +1,15 @@
 import React from 'react';
-import './searchBar.css'
-import { Form, Input } from 'reactstrap';
+// import './searchBar.css'
+import {Header, Form, Input, H1, Divider, RowContainer} from '../../../src/StyledComponents';
 
 export default function SearchBar(props){
     return (
-        <div className="searchBar">
-            <div className="home">
-                <i className="fab fa-instagram"></i> <h1>Instragram</h1>
-            </div>
+        <Header>
+            <RowContainer>
+                <i className="fab fa-instagram"></i>
+                <Divider></Divider>
+                <H1>Instragram</H1>
+            </RowContainer>
 
             <Form onSubmit={props.search}>
                 <Input 
@@ -18,11 +20,11 @@ export default function SearchBar(props){
                 />
             </Form>
 
-            <div className="explore">
+            <RowContainer>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user" onClick={props.logout}></i>
-            </div>
-        </div>
+            </RowContainer>
+        </Header>
     )
 }
